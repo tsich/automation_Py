@@ -1,0 +1,6 @@
+ena script pou na diavazei apo ena public url ta linked in urls
+kai ana mish wra kathe ena apo ta 5 cookies (50 to kathena alla seiriaka) na kanei print to url'
+
+!!!ana x lepta (ana 1' gia arxh kai meta ana mish wra) kathe cookie na kanei print ena url pou tha trexoun parallhla
+
+
