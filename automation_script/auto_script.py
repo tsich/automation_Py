@@ -34,11 +34,11 @@ def main():
     global skip
     global loops
 
-    cookies = {'cookie1': 'wwwwwwwwwwwwwwwwwwww',
-               'cookie2': 'eeeeeeeeeeeeeeeeeee',
-               'cookie3': 'sssssssssssssssssssss',
-               'cookie4': 'qqqqqqqqqqqqqqqqq',
-               'cookie5': 'kkkkkkkkkkkkkkkkk',
+    cookies = {'cookie1': 'k0a3IBbK4EaP74dzyqpfXuqBcielrQnAKUYkiJIqBB5E8m9c',
+               'cookie2': 'ZzNmV1lFYkpkdDcyNVROWTY1UGlYQVUzNldPSVNLNzQ',
+               'cookie3': '53c1b957098f4d929135ae0ed42833efadagjvjakblk',
+               'cookie4': 'fe746c765e324883af7bf8582774a789202gg20240113',
+               'cookie5': '3CBCsdkwFE535wsd2716BwdDD0wdf690trgECD35gg36D6AB7',
                }
 
     csv_list = []
