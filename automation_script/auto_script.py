@@ -5,8 +5,7 @@ import threading
 import multiprocessing
 from multiprocessing import Process
 
-# Spreadsheet: https://docs.google.com/spreadsheets/d/1r6HcTiOPP9tVCjsFV1DZtNVGSYF7wGCpdNheCbpVVZo/edit?usp=sharing
-
+# Target Spreadsheet: https://docs.google.com/spreadsheets/d/1r6HcTiOPP9tVCjsFV1DZtNVGSYF7wGCpdNheCbpVVZo/edit?usp=sharing
 
 def printit(skip, loops, cookie):
     while True:
@@ -50,7 +49,7 @@ def main():
     # Set up a thread for each cookie
     for key, value in cookies.items():
         loops = 10
-
+        # Create a thread for every cookie in the list
         t = threading.Thread(target=printit, args=(skip, loops, key,))
         threads.append(t)
 
