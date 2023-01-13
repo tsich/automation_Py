@@ -25,7 +25,7 @@ def printit(skip, loops, cookie):
         print("----------------------- New Entry in DataFrame -------------------------")
         csv_list.append(df.columns.to_list())
         print(csv_list)
-        sleep(randint(3, 5))
+        sleep(randint(10, 15))
 
 
 def main():
@@ -49,7 +49,7 @@ def main():
 
     # Set up a thread for each cookie
     for key, value in cookies.items():
-        loops = 3
+        loops = 10
 
         t = threading.Thread(target=printit, args=(skip, loops, key,))
         threads.append(t)
