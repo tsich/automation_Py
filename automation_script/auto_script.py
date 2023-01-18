@@ -4,6 +4,8 @@ from time import sleep
 import threading
 import multiprocessing
 from multiprocessing import Process
+import json
+
 
 # Target Spreadsheet: https://docs.google.com/spreadsheets/d/1r6HcTiOPP9tVCjsFV1DZtNVGSYF7wGCpdNheCbpVVZo/edit?usp=sharing
 
@@ -21,10 +23,9 @@ def printit(skip, loops, cookie):
         skip.value += 1
         print("loops in timer: ", loops)
         loops -= 1
-        print("----------------------- New Entry in DataFrame -------------------------")
+        # print("----------------------- New Entry in DataFrame -------------------------")
         csv_list.append(df.columns.to_list())
-        print(csv_list)
-        sleep(randint(10, 15))
+        # print(csv_list)
 
 
 def main():
@@ -51,13 +52,21 @@ def main():
         loops = 10
         # Create a thread for every cookie in the list
         t = threading.Thread(target=printit, args=(skip, loops, key,))
+        t.start()
+        sleep(60)
         threads.append(t)
 
     for x in threads:
-        x.start()
         # if used the threads will run serially
-        # if not, there might be an interference in data reading
+        # if not, they will run in parallel but there might be an interference in data reading
         x.join()
+
+    json_object = json.dumps(csv_list)
+    print(json_object)
+
+    # Writing to sample.json
+    with open("sample.json", "w") as outfile:   
+        outfile.write(json_object)
 
 
 if __name__ == '__main__':
